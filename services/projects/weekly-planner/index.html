@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weekly Planner Project</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <a href="../../../index.html">mehdi asghari</a>
+                </div>
+                <ul>
+                    <li><a href="../../../index.html">home</a></li>
+                    <li><a href="../../../pages/index.html">about</a></li>
+                    <li><a href="../../index.html">services</a></li>
+                    <li><a href="../../../contact/index.html">contact</a></li>
+                    <li><a href="mailto:mehdi25asghari@gmail.com?subject=Website%20Feedback">feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="services-header">
+                <h1>Weekly Planner Project</h1>
+                <p>This project page shows the planner logic and the code style useful for a training schedule.</p>
+            </div>
+
+            <div class="service-card" style="margin-bottom: 24px;">
+                <div class="service-icon">📅</div>
+                <h2>Planner example</h2>
+                <p>Use this page to review the weekly planning structure, copy code, and adapt it to your own progress
+                    tracker.</p>
+                <a href="../index.html" class="service-btn">Back to Project Library</a>
+            </div>
+
+            <div class="code-grid">
+                <article class="code-card">
+                    <div class="code-topbar">
+                        <div class="code-file">planner.js</div>
+                        <button class="copy-btn" data-target="planner-html">Copy</button>
+                    </div>
+                    <div class="code-editor">
+                        <pre id="planner-html"><code>const week = ['Monday', 'Tuesday', 'Wednesday'];
+const goals = week.map(day => ({ day, focus: 'Training' }));</code></pre>
+                    </div>
+                </article>
+
+                <article class="code-card">
+                    <div class="code-topbar">
+                        <div class="code-file">planner.css</div>
+                        <button class="copy-btn" data-target="planner-css">Copy</button>
+                    </div>
+                    <div class="code-editor">
+                        <pre id="planner-css"><code>.planner-box {
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 12px;
+  background: #181818;
+}</code></pre>
+                    </div>
+                </article>
+
+                <article class="code-card">
+                    <div class="code-topbar">
+                        <div class="code-file">planner.js</div>
+                        <button class="copy-btn" data-target="planner-js">Copy</button>
+                    </div>
+                    <div class="code-editor">
+                        <pre id="planner-js"><code>function addGoal(goal) {
+  const history = JSON.parse(localStorage.getItem('planner') || '[]');
+  history.push(goal);
+  localStorage.setItem('planner', JSON.stringify(history));
+}</code></pre>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.copy-btn').forEach((button) => {
+                button.addEventListener('click', async () => {
+                    const snippet = document.getElementById(button.getAttribute('data-target'));
+                    try {
+                        await navigator.clipboard.writeText(snippet.innerText);
+                        const original = button.textContent;
+                        button.textContent = 'Copied!';
+                        setTimeout(() => (button.textContent = original), 1000);
+                    } catch (error) {
+                        button.textContent = 'Copy failed';
+                        setTimeout(() => (button.textContent = 'Copy'), 1000);
+                    }
+                });
+            });
+        </script>
+    </body>
+
+</html>

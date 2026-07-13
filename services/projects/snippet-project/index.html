@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>loading screen project</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <a href="../../../index.html">mehdi asghari</a>
+                </div>
+                <ul>
+                    <li><a href="../../../index.html">home</a></li>
+                    <li><a href="../../../pages/index.html">about</a></li>
+                    <li><a href="../../index.html">services</a></li>
+                    <li><a href="../../../contact/index.html">contact</a></li>
+                    <li><a href="mailto:mehdi25asghari@gmail.com?subject=Website%20Feedback">feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="services-header">
+                <h1>Loading Screen Project</h1>
+                <p>Use this page to preview the loading screen code and copy the snippets for your own project.</p>
+            </div>
+
+            <div class="service-card" style="margin-bottom: 24px;">
+                <div class="service-icon">💻</div>
+                <h2>Loading Screen Project</h2>
+                <p>Choose one of the language panels below, copy the code, and reuse it in your own page design.</p>
+                <a href="../index.html" class="service-btn">Back to Project Library</a>
+            </div>
+
+            <div class="code-grid">
+                <article class="code-card">
+                    <div class="code-topbar">
+                        <div class="code-file">index.html</div>
+                        <button class="copy-btn" data-target="snippet-html">Copy</button>
+                    </div>
+                    <div class="code-editor">
+                        <pre id="snippet-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" dir="ltr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;loading page&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;section&gt;
+        &lt;div class="dots"&gt;
+            &lt;span style="--i:1"&gt;&lt;/span&gt;
+            &lt;span style="--i:2"&gt;&lt;/span&gt;
+            &lt;span style="--i:3"&gt;&lt;/span&gt;
+            &lt;span style="--i:4"&gt;&lt;/span&gt;
+            &lt;span style="--i:5"&gt;&lt;/span&gt;
+            &lt;span style="--i:6"&gt;&lt;/span&gt;
+            &lt;span style="--i:7"&gt;&lt;/span&gt;
+            &lt;span style="--i:8"&gt;&lt;/span&gt;
+            &lt;span style="--i:9"&gt;&lt;/span&gt;
+            &lt;span style="--i:10"&gt;&lt;/span&gt;
+            &lt;span style="--i:11"&gt;&lt;/span&gt;
+            &lt;span style="--i:12"&gt;&lt;/span&gt;
+            &lt;span style="--i:13"&gt;&lt;/span&gt;
+            &lt;span style="--i:14"&gt;&lt;/span&gt;
+            &lt;span style="--i:15"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </article>
+
+                <article class="code-card">
+                    <div class="code-topbar">
+                        <div class="code-file">style.css</div>
+                        <button class="copy-btn" data-target="snippet-css">Copy</button>
+                    </div>
+                    <div class="code-editor">
+                        <pre id="snippet-css"><code>* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: rgb(8, 110, 189);
+}
+
+section .dots span {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transform: rotate(calc(var(--i) * (360deg / 15))) translateY(35px);
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes animate {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}</code></pre>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.copy-btn').forEach((button) => {
+                button.addEventListener('click', async () => {
+                    const snippet = document.getElementById(button.getAttribute('data-target'));
+                    try {
+                        await navigator.clipboard.writeText(snippet.innerText);
+                        const original = button.textContent;
+                        button.textContent = 'Copied!';
+                        setTimeout(() => (button.textContent = original), 1000);
+                    } catch (error) {
+                        button.textContent = 'Copy failed';
+                        setTimeout(() => (button.textContent = 'Copy'), 1000);
+                    }
+                });
+            });
+        </script>
+    </body>
+
+</html>

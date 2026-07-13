@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU+Guides&family=Poppins:wght@300&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Smooch+Sans:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+nav {
+    position: fixed;
+    background-color: #1b1b1b;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
+    top: 0;
+    left: 0;
+}
+
+nav .menu {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu .logo a {
+    font-family: "Playwrite CU Guides", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.menu ul {
+    display: inline-flex;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-left: 7px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.image {
+    background: url(photo.jpg) no-repeat center center/cover;
+    height: auto;
+    width: 100%;
+    position: relative;
+    background-attachment: scroll;
+    display: none;
+}
+
+img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.center {
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    z-index: 1;
+    margin-top: 70px;
+}
+
+.center::before {
+    display: none;
+}
+
+.center .title {
+    text-align: center;
+    font-family: "Smooch Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #000000;
+    font-size: 20px;
+    background-color: #ffffff;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 15px 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 auto 15px auto;
+    max-width: 600px;
+    position: relative;
+    z-index: 10;
+}
+
+.center .sub-title {
+    text-align: end;
+    font-family: "Smooch Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    background-color: rgba(27, 27, 27, 0.9);
+    border-radius: 5px;
+    padding: 15px 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .menu .logo a {
+        font-size: 22px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+        margin-left: 3px;
+    }
+
+    .center {
+        padding: 15px 15px 20px 15px;
+        margin-top: 60px;
+    }
+
+    .center .title {
+        font-size: 18px;
+    }
+
+    .center .sub-title {
+        font-size: 13px;
+        line-height: 1.5;
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .menu {
+        padding: 0 10px;
+    }
+
+    .menu .logo a {
+        font-size: 18px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu ul li {
+        margin-left: 0;
+    }
+
+    .center {
+        padding: 12px 10px 15px 10px;
+        margin-top: 55px;
+    }
+
+    .center .title {
+        font-size: 16px;
+        padding: 10px 12px;
+        margin-bottom: 10px;
+    }
+
+    .center .sub-title {
+        font-size: 11px;
+        text-align: center;
+        padding: 10px 12px;
+        line-height: 1.4;
+    }
+}

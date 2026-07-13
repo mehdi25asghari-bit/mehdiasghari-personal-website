@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weekly Planner - Mehdi Asghari</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <a href="../../index.html">mehdi asghari</a>
+                </div>
+                <ul>
+                    <li><a href="../../index.html">home</a></li>
+                    <li><a href="../../pages/index.html">about</a></li>
+                    <li><a href="../index.html">services</a></li>
+                    <li><a href="../../contact/index.html">contact</a></li>
+                    <li><a href="mailto:mehdi25asghari@gmail.com?subject=Website%20Feedback">feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="planner-header">
+                <h1>Football Weekly Planner</h1>
+                <p>Set your weekly goals and track your progress</p>
+                <div class="services-links">
+                    <a href="../index.html" class="service-link">← All Services</a>
+                    <a href="../FOOTBALL%20CV/index.html" class="service-link">Football CV</a>
+                </div>
+            </div>
+
+            <div class="planner-wrapper">
+                <!-- Add Goal Section -->
+                <div class="add-goal-section">
+                    <h2>Add New Goal</h2>
+                    <div class="input-group">
+                        <input type="text" id="goalInput"
+                            placeholder="Enter your football goal (e.g., Improve dribbling)" maxlength="100">
+                        <input type="time" id="timeInput" title="Set time for this goal">
+                        <select id="daySelect">
+                            <option value="">Select Day</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                        <select id="categorySelect">
+                            <option value="">Category</option>
+                            <option value="Training">Training</option>
+                            <option value="Fitness">Fitness</option>
+                            <option value="Technique">Technique</option>
+                            <option value="Tactical">Tactical</option>
+                            <option value="Mental">Mental</option>
+                            <option value="Recovery">Recovery</option>
+                        </select>
+                        <button id="addGoalBtn" class="btn-primary">Add Goal</button>
+                    </div>
+                </div>
+
+                <!-- Weekly Goals Section -->
+                <div class="weekly-section">
+                    <h2>This Week's Goals</h2>
+                    <div class="week-view">
+                        <div class="day-card" data-day="Monday">
+                            <h3>Monday</h3>
+                            <div class="goals-list" data-day="Monday"></div>
+                        </div>
+                        <div class="day-card" data-day="Tuesday">
+                            <h3>Tuesday</h3>
+                            <div class="goals-list" data-day="Tuesday"></div>
+                        </div>
+                        <div class="day-card" data-day="Wednesday">
+                            <h3>Wednesday</h3>
+                            <div class="goals-list" data-day="Wednesday"></div>
+                        </div>
+                        <div class="day-card" data-day="Thursday">
+                            <h3>Thursday</h3>
+                            <div class="goals-list" data-day="Thursday"></div>
+                        </div>
+                        <div class="day-card" data-day="Friday">
+                            <h3>Friday</h3>
+                            <div class="goals-list" data-day="Friday"></div>
+                        </div>
+                        <div class="day-card" data-day="Saturday">
+                            <h3>Saturday</h3>
+                            <div class="goals-list" data-day="Saturday"></div>
+                        </div>
+                        <div class="day-card" data-day="Sunday">
+                            <h3>Sunday</h3>
+                            <div class="goals-list" data-day="Sunday"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics Section -->
+                <div class="stats-section">
+                    <div class="stat-card">
+                        <div class="stat-number" id="completedCount">0</div>
+                        <div class="stat-label">Completed This Week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalCount">0</div>
+                        <div class="stat-label">Total Goals</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="progressPercent">0%</div>
+                        <div class="stat-label">Progress</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="streakCount">0</div>
+                        <div class="stat-label">Weeks Active</div>
+                    </div>
+                </div>
+
+                <!-- History Section -->
+                <div class="history-section">
+                    <h2>Goal History</h2>
+                    <div class="history-controls">
+                        <button id="clearHistoryBtn" class="btn-secondary">Clear Completed History</button>
+                        <button id="resetWeekBtn" class="btn-secondary">Reset This Week</button>
+                    </div>
+                    <div class="history-list" id="historyList">
+                        <p class="empty-message">No completed goals yet. Start adding goals and mark them as done!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

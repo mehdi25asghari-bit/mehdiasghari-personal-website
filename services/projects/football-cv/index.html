@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Football CV Project</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <a href="../../../index.html">mehdi asghari</a>
+                </div>
+                <ul>
+                    <li><a href="../../../index.html">home</a></li>
+                    <li><a href="../../../pages/index.html">about</a></li>
+                    <li><a href="../../index.html">services</a></li>
+                    <li><a href="../../../contact/index.html">contact</a></li>
+                    <li><a href="mailto:mehdi25asghari@gmail.com?subject=Website%20Feedback">feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="services-header">
+                <h1>Football CV Project</h1>
+                <p>Review the code for the football profile page and copy any snippet you want to reuse.</p>
+            </div>
+
+            <div class="service-card" style="margin-bottom: 24px;">
+                <div class="service-icon">📋</div>
+                <h2>Project overview</h2>
+                <p>This page is a simple project example that shows how a football CV card can be styled and presented
+                    in the same look as the rest of the site.</p>
+                <a href="../index.html" class="service-btn">Back to Project Library</a>
+            </div>
+
+            <div class="code-grid">
+                <article class="code-card">
+                    <div class="code-topbar">
+                        <div class="code-file">index.html</div>
+                        <button class="copy-btn" data-target="html-snippet">Copy</button>
+                    </div>
+                    <div class="code-editor">
+                        <pre id="html-snippet"><code>&lt;article class="service-card"&gt;
+  &lt;div class="service-icon"&gt;📋&lt;/div&gt;
+  &lt;h2&gt;Football CV&lt;/h2&gt;
+  &lt;p&gt;Create a professional football resume card.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+                </article>
+
+                <article class="code-card">
+                    <div class="code-topbar">
+                        <div class="code-file">style.css</div>
+                        <button class="copy-btn" data-target="css-snippet">Copy</button>
+                    </div>
+                    <div class="code-editor">
+                        <pre id="css-snippet"><code>.service-card {
+  background: linear-gradient(135deg, #1a1a1a, #252525);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 30px;
+}</code></pre>
+                    </div>
+                </article>
+
+                <article class="code-card">
+                    <div class="code-topbar">
+                        <div class="code-file">script.js</div>
+                        <button class="copy-btn" data-target="js-snippet">Copy</button>
+                    </div>
+                    <div class="code-editor">
+                        <pre id="js-snippet"><code>function showPlayerProfile(player) {
+  document.title = player.name + ' - Football CV';
+  return player;
+}</code></pre>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.copy-btn').forEach((button) => {
+                button.addEventListener('click', async () => {
+                    const snippet = document.getElementById(button.getAttribute('data-target'));
+                    try {
+                        await navigator.clipboard.writeText(snippet.innerText);
+                        const original = button.textContent;
+                        button.textContent = 'Copied!';
+                        setTimeout(() => (button.textContent = original), 1000);
+                    } catch (error) {
+                        button.textContent = 'Copy failed';
+                        setTimeout(() => (button.textContent = 'Copy'), 1000);
+                    }
+                });
+            });
+        </script>
+    </body>
+
+</html>

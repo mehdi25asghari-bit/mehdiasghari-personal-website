@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU+Guides&family=Poppins:wght@300&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Smooch+Sans:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f0f0f;
+    padding-top: 70px;
+}
+
+nav {
+    position: fixed;
+    background-color: #1b1b1b;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
+    top: 0;
+    left: 0;
+}
+
+nav .menu {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu .logo a {
+    font-family: "Playwrite CU Guides", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.menu ul {
+    display: inline-flex;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-left: 7px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgb(255, 255, 255);
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    box-shadow: 0 20px 60px 15px rgb(117, 119, 233);
+}
+
+.image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: rgb(255, 255, 255)
+}
+
+.image .profile-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgb(117, 119, 233);
+}
+
+.profile-card .text.data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text.data .name {
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(31, 31, 35);
+}
+
+.text.data .job {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(31, 31, 35);
+}
+
+.profile-card .media-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.media-buttons .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 252, 252);
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background-color: rgb(235, 238, 241);
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.profile-card .buttons {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons .button {
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.856);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttons .button:hover {
+    background-color: rgba(30, 63, 141, 0.929);
+    color:#ffffff;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    height: 36%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 24px 24px 0 0;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+.profile-card .number {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.profile-card .number .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background-color: rgb(78, 78, 91);
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.profile-card .number .phone {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(31, 31, 35);
+}
+
+@media (max-width: 768px) {
+    .menu .logo a {
+        font-size: 22px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+        margin-left: 3px;
+    }
+
+    body {
+        padding-top: 60px;
+    }
+
+    .profile-card {
+        width: 320px;
+        padding: 20px;
+    }
+
+    .image {
+        height: 120px;
+        width: 120px;
+    }
+
+    .text.data .name {
+        font-size: 18px;
+    }
+
+    .text.data .job {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .menu {
+        padding: 0 10px;
+    }
+
+    .menu .logo a {
+        font-size: 18px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu ul li {
+        margin-left: 0;
+    }
+
+    body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .profile-card {
+        width: 280px;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .image {
+        height: 100px;
+        width: 100px;
+    }
+
+    .image .profile-image {
+        border: 2px solid white;
+    }
+
+    .text.data .name {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .text.data .job {
+        font-size: 12px;
+    }
+
+    .media-buttons {
+        margin: 10px 0;
+    }
+
+    .profile-card .media-buttons .link {
+        height: 28px;
+        width: 28px;
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    .profile-card .number .link {
+        height: 28px;
+        width: 28px;
+        font-size: 14px;
+    }
+
+    .profile-card .number .phone {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    .buttons {
+        margin-top: 15px;
+        gap: 8px;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}

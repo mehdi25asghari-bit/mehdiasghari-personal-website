@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> visit card project</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <a href="../../../index.html">mehdi asghari</a>
+                </div>
+                <ul>
+                    <li><a href="../../../index.html">home</a></li>
+                    <li><a href="../../../pages/index.html">about</a></li>
+                    <li><a href="../../index.html">services</a></li>
+                    <li><a href="../../../contact/index.html">contact</a></li>
+                    <li><a href="mailto:mehdi25asghari@gmail.com?subject=Website%20Feedback">feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="services-header">
+                <h1>Loading Screen Project</h1>
+                <p>Use this page to preview the visit card code and copy the snippets for your own project.</p>
+            </div>
+
+            <div class="service-card" style="margin-bottom: 24px;">
+                <div class="service-icon">👨‍💼</div>
+                <h2> visit card Project</h2>
+                <p>Choose one of the language panels below, copy the code, and reuse it in your own page design.</p>
+                <a href="../index.html" class="service-btn">Back to Project Library</a>
+            </div>
+
+            <div class="code-grid">
+                <article class="code-card">
+                    <div class="code-topbar">
+                        <div class="code-file">index.html</div>
+                        <button class="copy-btn" data-target="snippet-html">Copy</button>
+                    </div>
+                    <div class="code-editor">
+                        <pre id="snippet-html"><code>
+</code></pre>
+                    </div>
+                </article>
+
+                <article class="code-card">
+                    <div class="code-topbar">
+                        <div class="code-file">style.css</div>
+                        <button class="copy-btn" data-target="snippet-css">Copy</button>
+                    </div>
+                    <div class="code-editor">
+                        <pre id="snippet-css"><code>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: rgb(255, 255, 255);
+}
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+    max-width:100% ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+.image{
+    position: relative;
+    height: 150px;
+    width:150px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color:rgb(19, 95, 175)
+}
+
+.image .profile-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.profile-card .text.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text.data .name{
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(31, 31, 35);
+}
+.text.data .job{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(31, 31, 35);
+}
+.profile-card .media-buttons{
+    display:flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.media-buttons .link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background-color: rgb(19, 95, 175);
+    margin: 0 8px;
+    text-decoration: none;
+    font-size:18px;
+}
+.profile-card .buttons{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.buttons .button{
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(19, 95, 175);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.buttons .button:hover{
+    background-color: rgb(0, 136, 255);
+}
+.profile-card::before{
+    content: '';
+    position:absolute;
+    height:36%;
+    width: 100%;
+    top:0;
+    left:0;
+    border-radius: 24px 24px 0 0;
+    background-color: rgb(0, 136, 255);
+}
+.profile-card .number{
+    display:flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.profile-card .number .link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background-color: rgb(19, 95, 175);
+    margin: 0 8px;
+    text-decoration: none;
+    font-size:18px;
+}
+.profile-card .number .phone{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+
+</code></pre>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.copy-btn').forEach((button) => {
+                button.addEventListener('click', async () => {
+                    const snippet = document.getElementById(button.getAttribute('data-target'));
+                    try {
+                        await navigator.clipboard.writeText(snippet.innerText);
+                        const original = button.textContent;
+                        button.textContent = 'Copied!';
+                        setTimeout(() => (button.textContent = original), 1000);
+                    } catch (error) {
+                        button.textContent = 'Copy failed';
+                        setTimeout(() => (button.textContent = 'Copy'), 1000);
+                    }
+                });
+            });
+        </script>
+    </body>
+
+</html>
